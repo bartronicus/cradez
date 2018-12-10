@@ -1,0 +1,60 @@
+#galaxy1 {
+  display:none;
+}
+#galaxy2 {
+  display:none;
+}
+#galaxy3 {
+  display:none;
+}
+
+#planet1 {
+  display:none
+}
+
+#planet2 {
+  display:none
+}
+
+#planet3 {
+  display:none
+}
+
+
+
+#cosmo {
+  animation:cosmo 3s infinite;
+}
+
+#cosmoBoxBox {
+  display:flex;
+  align-items: flex-end;
+}
+
+#cosmoBox {
+  width:60%;
+  margin:auto;
+  height:50%;
+}
+
+@keyframes cosmo {
+  0% {
+    transform: rotate(0deg);
+    x:80;
+    y:60;
+  }
+  30% {
+    x:70;
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    /*y:90;*/
+  }
+  100% {
+    x:80;
+    y:60;
+    transform: rotate(0deg);
+  }
+}

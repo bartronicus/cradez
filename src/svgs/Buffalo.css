@@ -1,0 +1,131 @@
+
+
+#mrBuffalo {
+  transform:translate(-5px) scale(.5);
+
+}
+
+#smoke1 {
+  -webkit-animation: smoke1 3s infinite;
+  -moz-animation:    smoke1 3s infinite;
+  -o-animation:      smoke1 3s infinite;
+  animation:         smoke1 3s infinite;
+}
+
+#smoke2 {
+  -webkit-animation: smoke2 3s infinite;
+  -moz-animation:    smoke2 3s infinite;
+  -o-animation:      smoke2 3s infinite;
+  animation:         smoke2 3s infinite;
+}
+#smoke3 {
+  -webkit-animation: smoke3 3s infinite;
+  -moz-animation:    smoke3 3s infinite;
+  -o-animation:      smoke3 3s infinite;
+  animation:         smoke3 3s infinite;
+}
+#smoke4 {
+  -webkit-animation: smoke4 3s infinite;
+  -moz-animation:    smoke4 3s infinite;
+  -o-animation:      smoke4 3s infinite;
+  animation:         smoke4 3s infinite;
+}
+#smoke5 {
+  display:none;
+}
+
+
+
+@keyframes smoke1 {
+  0% {
+    transform:translateY(0) scale(.5);
+  }
+  100% {
+    transform: translateY(-15px) scale(.5);
+  }
+}
+
+@keyframes smoke2 {
+  0% {
+    opacity:0;
+    transform:translateY(0px) scale(.5);
+  }
+  75% {
+    opacity:.9;
+    transform:translateY(-5px) scale(.5);
+  }
+  100% {
+    opacity:.1;
+    transform:translateY(-7px) scale(.5);
+  }
+}
+
+@keyframes smoke3 {
+  0% {
+    opacity:0;
+    transform:translateY(0px) scale(.5);
+  }
+  50% {
+    opacity:.7;
+    transform:translateY(-3px) scale(.5);
+  }
+  80% {
+    opacity:1;
+    transform:translateY(-4px) scale(.5);
+  }
+  100% {
+    opacity:.7;
+    transform:translateY(-5px) scale(.5);
+  }
+
+}
+
+@keyframes smoke4 {
+  0% {
+    transform:scale(.5);
+    opacity:.5;
+  }
+  5% {
+    transform:scale(.5);
+    opacity:.6;
+  }
+  10% {
+    transform:scale(.5);
+    opacity:.7
+  }
+  15% {
+    transform:scale(.5);
+    opacity:.6
+  }
+  20% {
+    transform:scale(.5);
+    opacity:.5
+  }
+  25% {
+    transform:scale(.5);
+    opacity:.7
+  }
+  30% {
+    transform:scale(.5);
+    opacity:.5
+  }
+  80% {
+    transform:scale(.5);
+    opacity:.5;
+  }
+  90% {
+    transform:scale(.5);
+    opacity:1;
+  }
+  100% {
+    transform:scale(.5);
+    opacity:.5;
+  }
+}
+
+
+#mrBuffaloHolder{
+  height:150px;
+  width:145px;
+}
+/*<svg width={260} height={280} {...props}>*/

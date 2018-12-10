@@ -1,0 +1,99 @@
+
+#fart1 {
+  -webkit-animation: fart1 3s infinite;
+  -moz-animation:    fart1 3s infinite;
+  -o-animation:      fart1 3s infinite;
+  animation:         fart1 3s infinite;
+}
+
+#fart2 {
+  -webkit-animation: fart2 3s infinite;
+  -moz-animation:    fart2 3s infinite;
+  -o-animation:      fart2 3s infinite;
+  animation:         fart2 3s infinite;
+
+}
+#fart3 {
+  -webkit-animation: fart3 3s infinite;
+  -moz-animation:    fart3 3s infinite;
+  -o-animation:      fart3 3s infinite;
+  animation:         fart3 3s infinite;
+}
+#fart4 {
+  -webkit-animation: fart4 3s infinite;
+  -moz-animation:    fart4 3s infinite;
+  -o-animation:      fart4 3s infinite;
+  animation:         fart4 3s infinite;
+}
+
+@keyframes fart1 {
+  0% {
+    opacity:1;
+    transform:scale(1.0) translate(0px,10px);
+  }
+  80% {
+    opacity:.8;
+  }
+  100% {
+    opacity:0;
+    transform:scale(1.5) translate(-50px,-120px);
+  }
+}
+@keyframes fart2{
+  0% {
+    opacity:0;
+    transform:scale(1.0) translate(0px,40px);
+  }
+  5% {
+    opacity:0;
+  }
+  80% {
+    opacity:.5;
+  }
+  100% {
+    transform:scale(1.5) translate(-60px,-100px);
+    opacity:.1;
+  }
+
+
+}
+
+@keyframes fart3{
+  0% {
+    opacity:0;
+    transform:translateY(0px);
+  }
+  30% {
+    opacity:0;
+  }
+  70%{
+    opacity:.5;
+    transform:translateY(-10px);
+  }
+  100% {
+    opacity:.3;
+    transform:translateY(-20px);
+  }
+}
+
+@keyframes fart4 {
+  0% {
+    opacity:.2;
+    y:20;
+
+  }
+
+  70% {
+    opacity:.18;
+  }
+
+  85% {
+    opacity:.3;
+  }
+
+  100% {
+    opacity:.2;
+    y:20;
+  }
+
+}

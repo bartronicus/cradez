@@ -1,32 +1,603 @@
-.App {
-  text-align: center;
+html {
+  padding:0;
+  margin:0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+table {
+  border-collapse: collapse;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  width:95%;
+  max-width:400px;
+}
+
+#waitingRoomTable {
+  width:100%;
+  max-width:260px;
+  margin-bottom:15px;
+  box-shadow: 2px 2px black;
+}
+
+
+
+.startButton:hover {
+  margin-bottom:2px;
+  margin-bottom:2px;
+  box-shadow:2px 2px black;
+  color:violet;
+}
+
+.redTeam{
+  background-color:violet;
+  width:100%;
+
+}
+.blueTeam {
+  background-color:aqua;
+  width:100%;
+}
+
+
+
+.menu {
+  position:absolute;
+}
+.menu ul {
+  list-style:none;
+  padding:0;
+}
+
+.hideMenu {
+  display:none;
+}
+
+body {
+  height:100%;
+  width:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: center;
+  color:black;
+  background:
+  linear-gradient(63deg, white 23%, rgba(250,250,250,0.001) 23%) 7px 0,
+  linear-gradient(63deg, rgba(250,250,250,0.001) 74%, white 78%),
+  linear-gradient(63deg, rgba(250,250,250,0.001) 34%, white 38%, white 58%, rgba(250,250,250,0.001) 62%),
+  rgba(100,100,100,.01);
+  background-size: 16px 48px;
+}
+
+h1 {
+    color: #EE82EE;
+    text-shadow: 2px 3px 0 black;
+    font-size:43px;
+}
+
+button {
+  background-color:white;
+  border:1px solid lightgrey;
+  border-radius:5px;
+  font-weight:800;
+  font-size:16px;
+  box-shadow: 2px 2px grey;
+  /*background-image: radial-gradient(farthest-side at 10% 5%,yellow, white);  */
+}
+
+button:focus {outline:0;}
+
+#aquaButton {
+  background-image: linear-gradient(aqua,violet,aqua);
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#aquaButton:hover {
+  color:yellow;
+  box-shadow: 5px 5px grey;
+  padding:1px;
+}
+
+#firstAquaButton {
+  background-image: linear-gradient(aqua,violet,aqua);
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#firstAquaButton:hover {
+  color:yellow;
+  font-size:15px;
+  box-shadow: 5px 5px grey;
+  padding:5px 8px 3px 8px;
+}
+
+#yellowButton {
+  background-image: radial-gradient(farthest-side at 30% 85%,yellow,magenta );
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#yellowButton:hover{
+  color:brown;
+  box-shadow: 5px 5px grey;
+  padding:3px 8px 3px 8px;
+}
+
+#violetButton {
+  background-image: radial-gradient(farthest-side at 80% 5%,violet, white);
+}
+#violetButton:hover{
+  color:yellow;
+  box-shadow: 5px 5px grey;
+  padding:3px 8px 3px 8px;
+}
+
+#redButton {
+  background-image: radial-gradient(farthest-side at 50% 50%,red,violet);
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#redButton:hover{
+  color:purple;
+  box-shadow: 5px 5px grey;
+  padding:3px 8px 3px 8px;
+}
+
+#greenButton {
+  background-image: radial-gradient(farthest-side at 75% 75%,limegreen, violet);
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#greenButton:hover{
+  color:purple;
+  box-shadow: 5px 5px grey;
+  padding:3px 8px 3px 8px;
+}
+
+#purpleButton {
+  background-image: radial-gradient(farthest-side at 75% 75%,	#DDA0DD, white);
+  color:white;
+  text-shadow: 1px 1px 0  black;
+}
+#purpleButton:hover{
+  color:red;
+  box-shadow: 5px 5px grey;
+  padding:3px 8px 3px 8px;
+}
+
+
+#title {
+
+  /*background: -webkit-linear-gradient(#EE82EE, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+#astroBoxBox {
+  width:80%;
+  margin-bottom:50px;
+  display:block;
+}
+
+#astroBox {
+  width:80%;
+  height:80%;
+}
+
+
+
+#newGameRow {
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+#joinGameRow {
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+#enterGameName {
+  margin-right:5px;
+  border-radius:5px;
+  border:1px solid lightgrey;
+  text-align:center;
+}
+
+#headerContainer {
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+#menuIcon {
+  margin-right:15px;
+}
+
+#rules {
+  margin: auto;
+  width: 95%;
+  max-width:400px;
+}
+
+
+
+#alien {
+  display:flex;
+  justify-content: flex-end;
+}
+
+#bigfootTextBox {
+  margin-top:5px;
+	position: relative;
+  background-image: radial-gradient(farthest-side at 70% 15%,rgba(0,255,260,.6),rgba(0,255,255,.2), rgba(0,255,260,.6));
+  color:white;
+  text-shadow: 0px 0px 3px  black;
+	border-radius: .4em;
+  border-radius:25px;
+  padding:2px;
+  padding-left:5px;
+}
+
+#bigfootTextBox:after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 85%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: rgba(0,255,260,.6);
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -15px;
+	margin-bottom: -20px;
+}
+
+#alienTextBox {
+  padding-left:5px;
+	position: relative;
+	background-image: radial-gradient(farthest-side at 0% 15%,rgba(255,223,0,.1),rgba(255,223,0,.7));
+	border-radius: 25px;
+  padding:1px;
+  color:white;
+  text-shadow: 0px 0px 3px  black;
+}
+
+#alienTextBox:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 45%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color: rgba(255,223,0,.7);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -100px;
+	margin-bottom: -30px;
+
+}
+
+.dialogue {
+  padding-left:5px;
+}
+
+#bigfoot {
+  margin-top:15px;
+}
+
+.next {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+input {
+  border-radius:5px;
+  border:1px solid black;
+  outline-color:violet;
+  padding-left:2px;
+}
+
+.wordInput {
+  margin-top:10px;
+  margin-bottom:10px;
+  width:250px;
+}
+
+#warningMessage {
+  color:violet;
+  font-weight:800;
+}
+
+
+#arrowBorder {
+  margin-top:30px;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background:radial-gradient(farthest-side at 70% 15%,violet,aqua, white);
+  width:30px;
+  height:30px;
+  border:1px solid rgba(0,0,255,.4);
+  border-radius:50%;
 }
 
-.App-link {
-  color: #61dafb;
+#arrowBorder:hover {
+  color:green;
+  animation: swirl 2s infinite;
+  width:33px;
+  height:33px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes swirl {
+  0% {background: radial-gradient(farthest-side at 65% 20%,violet,aqua, white);}
+  5% {background: radial-gradient(farthest-side at 60% 25%,violet,aqua, violet);}
+  10%{background: radial-gradient(farthest-side at 55% 30%,violet,aqua, violet);}
+  15%{background: radial-gradient(farthest-side at 50% 35%,violet,aqua, violet);}
+  20%{background: radial-gradient(farthest-side at 45% 40%,white,violet, aqua);}
+  25%{background: radial-gradient(farthest-side at 40% 45%,white,violet, aqua);}
+  30%{background: radial-gradient(farthest-side at 35% 50%,white,violet, aqua);}
+  35%{background: radial-gradient(farthest-side at 30% 55%,violet,aqua, white);}
+  40%{background: radial-gradient(farthest-side at 25% 40%,violet,aqua, white);}
+  45%{background: radial-gradient(farthest-side at 20% 35%,violet,aqua, white);}
+  50%{background: radial-gradient(farthest-side at 10% 40%,aqua,white, aqua);}
+  55%{background: radial-gradient(farthest-side at 15% 45%,aqua,white, aqua);}
+  60%{background: radial-gradient(farthest-side at 20% 55%,aqua,white, aqua);}
+  65%{background: radial-gradient(farthest-side at 25% 60%,white,violet, violet);}
+  70%{background: radial-gradient(farthest-side at 30% 65%,white,violet, violet);}
+  75%{background: radial-gradient(farthest-side at 35% 60%,white,violet, violet);}
+  80%{background: radial-gradient(farthest-side at 40% 55%,aqua,white, violet);}
+  85%{background: radial-gradient(farthest-side at 45% 40%,aqua,white, violet);}
+  90%{background: radial-gradient(farthest-side at 55% 35%,aqua,white, violet);}
+  95%{background: radial-gradient(farthest-side at 60% 30%,aqua,white, violet);}
+  100%{background: radial-gradient(farthest-side at 65% 25%,aqua,white, violet);}
+
+}
+
+
+#bottomBox {
+  display:flex;
+}
+
+#rulesBox {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  border:1px solid lightgrey;
+  border-radius:15px;
+  padding:3px;
+  background-image: radial-gradient(farthest-side at 70% 15%,rgba(255,223,0,.1),rgba(255,223,0,.2),rgba(255,223,0,.1));
+  margin-bottom:50px;
+  padding-bottom:25px;
+  padding-left:10px;
+}
+
+
+#mrBuffaloHolderHolder {
+  display:flex;
+  justify-content: center;
+}
+
+#buffaloSpeechRow {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 30px;
+    position: relative;
+    max-width: 300px;
+}
+
+#buffaloSpeechBubble {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:50%;
+  border:1px solid lightgrey;
+  width:80px;
+  height:80px;
+  font-size:.7em;
+  padding:5px;
+  background:rgb(238,130,238);
+  text-align:center;
+}
+
+#buffaloSpeechRow :after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 75%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color:rgb(238,130,238);
+	border-bottom: 0;
+	border-left: 0;
+	margin-bottom: -10px;
+}
+
+#randomButton {
+  margin-left:5px;
+}
+
+.random {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:50%;
+  height:30px;
+  width:30px;
+  font-size:12px;
+  background-color:aqua;
+  margin-left:10px;
+}
+
+
+.random:active {
+  background-color:violet;
+  color:white;
+}
+
+.nextButton {
+  margin-top:15px;
+}
+
+
+#menuUL {
+  background-color:white;
+  border:.1px solid lightgrey;
+}
+
+.menuLI {
+  border:.1px solid lightgrey;
+  padding:5px;
+  font-size:.7em;
+}
+
+#waitingRoomContainer {
+  min-height: 300px;
+}
+
+#waitinRoomRulesUL {
+  margin-top:25px;
+
+}
+
+
+
+#redTeamScoreBox {
+  background-color: violet;
+  width:150px;
+  text-align:left;
+  margin-top:5px;
+  box-shadow:2px 2px black;
+}
+
+#blueTeamScoreBox {
+  margin-top:3px;
+  background-color: aqua;
+  width:150px;
+  text-align:left;
+  box-shadow:2px 2px black;
+}
+
+#watchGameClock {
+  margin-left:3px;
+  color:violet;
+  text-shadow: 1px 1px 0 black;
+}
+
+
+
+.nextButton{
+  font-size:1.2em;
+  width:100px;
+
+}
+
+.skipButton {
+  font-size:1.2em;
+  width:100px;
+
+}
+
+#activePlayerScreen {
+  height:70vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items : center;
+}
+
+.redTeamColor {
+  color:violet;
+}
+
+.blueTeamColor {
+  color:aqua;
+}
+
+.rulesList {
+  padding-left:20px;
+}
+
+#donateButton {
+  background-color: blue;
+  color:white;
+}
+
+#stripeFormBox {
+  margin-top:60px;
+}
+
+#donateButton:hover {
+  padding:5px;
+  padding-left:9px;
+  padding-right:9px;
+  box-shadow: 4px 4px grey;
+}
+
+#paymentForm{
+  transition: 3s;
+  left: 0;
+}
+
+
+#hidden {
+  display:none;
+}
+
+#submitButton {
+  background-color:blue;
+  color:white;
+  margin-top:25px;
+}
+
+#submitButton:hover {
+  padding:5px;
+  padding-left:9px;
+  padding-right:9px;
+  box-shadow: 4px 4px grey;
+}
+
+#donationAmount {
+  border:0;
+  border-bottom:1px solid darkgrey;
+  background-color:rgba(0,100,200,.1);
+  width:60px;
+  font-size:18px;
+  padding-bottom:2px;
+  border-radius:0;
+
+}
+
+#dollarSign {
+  font-size:20px;
+  color:rgb(100,100,100);
+}
+
+#donationBox {
+  height:125px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#donationLabel {
+  color:rgb(50,50,50);
+}
+
+.randomButtonRow {
+  display:flex;
+  align-items:center;
+}
+
+#exit {
+  margin-top:40px;
+  margin-bottom:50px;
+}
+
+input,textarea {
+  font-size: 16px;
 }

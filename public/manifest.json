@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CRADEZ",
+  "name": "A charades game for 'friends'",
   "icons": [
     {
       "src": "favicon.ico",
