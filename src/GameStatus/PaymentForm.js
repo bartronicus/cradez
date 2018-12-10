@@ -27,16 +27,3 @@ class CheckoutForm extends Component {
 }
 
 export default injectStripe(CheckoutForm);
-
-
-
-
-
-
-
-/*<div>
-  <span id="dollarSign">$</span>
-  <input id="donationAmount" label='Donation Amount' value={this.state.amount}
-         onChange={(e)=>{this.setDonationAmount(e.target.value)}} type="number"
-         min="0" step=".50"/>
-</div>*/
