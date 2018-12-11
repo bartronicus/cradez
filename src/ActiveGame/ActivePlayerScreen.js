@@ -191,7 +191,7 @@ class ActivePlayer extends React.Component {
     const skipButton = () => {
       if(this.state.turn < this.props.nouns.length-1 && !this.state.skipped){
         return(
-          <button id="yellowButton" className="skipButton" onClick={this.skipQuestion}>Skip</button>
+          <button id="yellowButton" className="skipButton" onClick={this.skipQuestion}><h2>Skip</h2><h3>(-1)</h3></button>
         )
       }
     }
@@ -200,7 +200,7 @@ class ActivePlayer extends React.Component {
         <div  id="activePlayerScreen">
           <SimpleStorage parent={this}/>
           <h3>{this.props.nouns[this.state.turn] + ' ' + this.props.actions[this.state.turn]}</h3>
-          <button className="nextButton" id="aquaButton" onClick={this.incrementTheTurnAndPoints}>Next</button>
+          <button className="nextButton" id="aquaButton" onClick={this.incrementTheTurnAndPoints}><h2>Next</h2><h3>(+2)</h3></button>
           <h1>{this.state.clock}</h1>
           {skipButton()}
         </div> :
